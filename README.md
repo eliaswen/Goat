@@ -9,6 +9,10 @@ This program simulates the Monty Hall problem using multiple threads to perform 
 - Progress monitoring during the simulation
 - Formatted output for readability
 
+## Download
+
+To download the latest build, download the artifact from the last action run.
+
 ## Requirements
 
 - C++11 or later
@@ -19,7 +23,7 @@ This program simulates the Monty Hall problem using multiple threads to perform 
 Compile the program using a C++ compiler:
 
 ```sh
-cl /O2 /EHsc /GL /GS- /Oi /Oy /GT /Gy /Gw /fp:fast /arch:AVX512 /std:c++20 /MT goat.cpp /link /LTCG /OPT:REF /OPT:ICF
+cl /EHsc goat.cpp
 ```
 
 Run the program with the following command-line options:
