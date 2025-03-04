@@ -1,9 +1,9 @@
-name: Compile goat-fast
+name: Compile goat for Windows
 
 on:
   push:
     paths:
-      - 'goat-fast.cpp'
+      - 'goat.cpp'
 
 jobs:
   build:
@@ -17,10 +17,10 @@ jobs:
       uses: ilammy/msvc-dev-cmd@v1
 
     - name: Compile goat.cpp
-      run: cl /O2 /GL /EHcs /GS- /Oi /Oy /GT /Gy /Gw /fp:fast /std:c++20 /arch:AVX512 /MT goat-fast.cpp /link /LTCG /OPT:REF /OPT:ICF
+      run: cl /O2 /GL /EHcs /GS- /Oi /Oy /GT /Gy /Gw /fp:fast /std:c++20 /MT goat.cpp /link /LTCG /OPT:REF /OPT:ICF
 
-    - name: Upload goat-fast.exe
+    - name: Upload goat.exe
       uses: actions/upload-artifact@v4
       with:
-        name: goat-fast
-        path: goat-fast.exe
+        name: goat
+        path: goat.exe

@@ -1,0 +1,26 @@
+name: Compile goat-fast for Linux
+
+on:
+  push:
+    paths:
+      - 'goat-fast.cpp'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+
+          - name: Install dependencies
+            run: sudo apt-get install -y g++
+
+          - name: Compile Goat
+            run: g++ -O3 -march=native -flto -s -o goat-fast goat-fast.cpp -pthread -mavx512vl
+
+          - name: Upload artifact
+            uses: actions/upload-artifact@v4
+            with:
+              name: goat-fast
+              path: goat-fast
