@@ -1,0 +1,17 @@
+name: Compile Goat
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Visual Studio
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Compile goat.cpp
+      run: cl /O2 /GL /GS- /Oi /Oy /GT /Gy /Gw /fp:fast /std:c++20 /MT goat.cpp /link /LTCG /OPT:REF /OPT:ICF
