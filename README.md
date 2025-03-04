@@ -47,3 +47,5 @@ goat -t 4 -im 10
 ## Output
 
 The program will display the progress of the simulation, including the number of iterations completed, the number of wins for each strategy, and the time taken per million iterations. At the end of the simulation, it will provide a summary of the results.
+
+On my PC (Ryzen 7 7700), the simulation takes approximately 20 ms per million iterations with 8 threads.
