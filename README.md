@@ -11,7 +11,7 @@ This program simulates the Monty Hall problem using multiple threads to perform 
 
 ## Download
 
-To download the latest build, download the artifact from the last action run.
+To download goat.exe or goat-fast.exe, download the artifact from the latest action run.
 
 ## Requirements
 
@@ -32,7 +32,7 @@ Run the program with the following command-line options:
 goat [options]
 ```
 
-### Options
+## Options
 
 - `-t, --threads <number>`: Number of threads to use for the simulation.
 - `-i, --iterations <number>`: Number of iterations to run.
@@ -40,7 +40,7 @@ goat [options]
 - `-ib, --iterations-billions <number>`: Number of iterations to run in billions.
 - `-y, --yes`: Skip confirmation prompt before starting the simulation.
 
-### Example
+## Example
 
 Run the simulation with 4 threads and 10 million iterations:
 
@@ -54,11 +54,11 @@ The program will display the progress of the simulation, including the number of
 
 On my PC (Ryzen 7 7700), the simulation takes approximately 20 ms per million iterations with 8 threads.
 
-## Goat-Fast
+# Goat-Fast
 
 The `goat-fast` version of the simulation uses SIMD (Single Instruction, Multiple Data) instructions to further optimize the performance. This version requires a CPU with AVX512 support.
 
-### Usage
+## Usage
 
 Compile the `goat-fast` program using a C++ compiler with AVX512 support:
 
@@ -72,7 +72,7 @@ Run the program with the same command-line options as the standard version:
 goat-fast [options]
 ```
 
-### Example
+## Example
 
 Run the `goat-fast` simulation with 4 threads and 10 million iterations:
 
@@ -80,7 +80,7 @@ Run the `goat-fast` simulation with 4 threads and 10 million iterations:
 goat-fast -t 4 -im 10
 ```
 
-### Output
+## Output
 
 The `goat-fast` program will display the progress of the simulation, including the number of iterations completed, the number of wins for each strategy, and the time taken per million iterations. At the end of the simulation, it will provide a summary of the results.
 
