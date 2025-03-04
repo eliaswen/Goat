@@ -9,6 +9,10 @@ This program simulates the Monty Hall problem using multiple threads to perform 
 - Progress monitoring during the simulation
 - Formatted output for readability
 
+## Download
+
+To download the latest build, download the artifact from the last action run.
+
 ## Requirements
 
 - C++11 or later
