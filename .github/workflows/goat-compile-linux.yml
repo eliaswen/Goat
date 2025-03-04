@@ -1,6 +1,7 @@
 name: Compile goat for Linux
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'goat.cpp'
