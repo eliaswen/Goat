@@ -158,8 +158,7 @@ int main(int argc, char* argv[]) {
 
             last_total_done = total_done;
             last_time = now;
-            this_thread::sleep_for(chrono::milliseconds(500));
-        }
+                }
     });
 
     // Wait for threads to finish

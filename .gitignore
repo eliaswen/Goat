@@ -4,3 +4,7 @@ goat.obj
 goat.pdb
 vc140.pdb
 .vscode
+goat-fast.exe
+goat-fast.ilk
+goat-fast.obj
+goat-fast.pdb
