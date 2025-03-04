@@ -19,7 +19,7 @@ This program simulates the Monty Hall problem using multiple threads to perform 
 Compile the program using a C++ compiler:
 
 ```sh
-cl /O2 /EHsc /GL /GS- /Oi /Oy /GT /Gy /Gw /fp:fast /arch:AVX512 /std:c++20 /MT goat.cpp /link /LTCG /OPT:REF /OPT:ICF
+cl /EHsc goat.cpp
 ```
 
 Run the program with the following command-line options:
