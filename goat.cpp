@@ -155,10 +155,13 @@ int main(int argc, char* argv[]) {
             cout << "| B Wins: " << format_number(b_wins) << " ("
                  << setprecision(2) << 100.0 * b_wins / total_done << "%) ";
             cout << "| Time per million: " << fixed << setprecision(2) << time_per_million << " ms      ";
+            cout.flush();
 
             last_total_done = total_done;
             last_time = now;
-                }
+
+            this_thread::sleep_for(chrono::milliseconds(25)); // Add delay
+        }
     });
 
     // Wait for threads to finish
