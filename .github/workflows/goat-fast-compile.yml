@@ -23,7 +23,7 @@ jobs:
           - name: Upload artifact
             uses: actions/upload-artifact@v4
             with:
-              name: goat-fast
+              name: goat-fast-linux
               path: goat-fast
     build-windows:
       runs-on: windows-latest
@@ -41,5 +41,5 @@ jobs:
       - name: Upload goat-fast.exe
         uses: actions/upload-artifact@v4
         with:
-          name: goat-fast
+          name: goat-fast-windowss
           path: goat-fast.exe
