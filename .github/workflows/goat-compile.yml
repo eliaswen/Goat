@@ -1,4 +1,4 @@
-name: Compile goat for Linux
+name: Compile goat
 
 on:
   workflow_dispatch:
