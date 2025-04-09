@@ -41,5 +41,5 @@ jobs:
       - name: Upload goat-fast.exe
         uses: actions/upload-artifact@v4
         with:
-          name: goat-fast-windowss
+          name: goat-fast-windows
           path: goat-fast.exe
